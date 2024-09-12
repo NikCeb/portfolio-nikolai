@@ -12,6 +12,7 @@ export default function Home() {
           navItems={name: 'Home', link: '/', icon: <FaHome />, className:  }/> */}
         <Hero />
         <Grid />
+
       </div>
     </main>
   );
