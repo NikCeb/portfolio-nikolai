@@ -56,7 +56,7 @@ export const BentoGridItem = ({
     const [copied, setCopied] = useState(false);
     const handleCopy = () => {
         navigator.clipboard.writeText('testssss');
-
+        console.log('wwww');
         setCopied(true);
     }
     return (
@@ -82,16 +82,28 @@ export const BentoGridItem = ({
                     {title}
 
 
+                    {/* <div
+                        className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
+                            } `}
+                    >
+                        {spareImg && (
+                            <img
+                                src={img}
+                                alt={spareImg}
+                                className="object-cover object-center w-full h-full"
+                            />
+                        )}
+                    </div> */}
 
-                    {id === 1 && (
+                    {id === 2 && (
                         <div className="flex gap-1 lg:gap-5 w-fit
                                 absolute -right-3 lg:right-2 ">
 
-                            <div className="flex flex-col gap-3 lg:gap-8 ">
+                            <div className="flex flex-col gap-3 lg:gap-5 ">
 
-                                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+                                <span className="py-5 px-3 rounded-lg text-center bg-[#101321]" />
                                 {techStackRow1.map((items, index) => (
-                                    <span key={index} className="py=2 lg:py4 lg:px-3 px-3 lg:px-3 text-xs lg:text-base opacity-50 
+                                    <span key={index} className="py-3 md:py-3 lg:py5 lg:px-3 px-3 lg:px-3 text-xs lg:text-base opacity-50 
                                                     lg:opacity-100 rounded-lg text-center bg-[#10132E] ">
                                         {items.item}
                                     </span>
@@ -100,15 +112,15 @@ export const BentoGridItem = ({
 
                             </div>
 
-                            <div className="flex flex-col gap-3 lg:gap-8 ">
+                            <div className="flex flex-col gap-3 lg:gap-5 ">
 
                                 {techStackRow2.map((items, index) => (
-                                    <span key={index} className="py=2 lg:py4 lg:px-3 px-3 lg:px-3 text-xs lg:text-base opacity-50
+                                    <span key={index} className="py-3 md:py-3 lg:py5 lg:px-3 px-3 lg:px-3 text-xs lg:text-base opacity-50
                                                     lg:opacity-100 rounded-lg text-center bg-[#10132E] ">
                                         {items.item}
                                     </span>
                                 ))}
-                                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+                                <span className="py-5 px-3 rounded-lg text-center bg-[#101321   ]" />
                             </div>
 
                         </div>
@@ -120,32 +132,33 @@ export const BentoGridItem = ({
 
                 <div className={`${id === 3} && 'flex justify-center h-full`}>
                     {id === 3 && (
-                        <BackgroundGradientAnimation>
-                            <div className="absolute z-50 inset-0 flex items-center justify-center 
-                        text-white font-bold px-4 pointer-events-none 
-                        text-3xl text-center md:text-4xl lg:text-7xl rounded-lg"></div>
-
-                        </BackgroundGradientAnimation>
+                        <BackgroundGradientAnimation />
                     )}
                     {id === 3 && (
                         <div className="mt-5 relative">
-                            <div className={`absolute -bottom-5 right-0`}>
+                            <div className={`absolute -bottom-10 right-0 `}>
+
                                 <Lottie options={{
                                     loop: copied,
                                     autoplay: copied,
                                     animationData,
                                     rendererSettings: {
-                                        preserveAspectRatio: 'xMidYMid slice'
+                                        preserveAspectRatio: 'slice'
                                     }
                                 }} />
+
+                                <MagicButton
+                                    title={copied ? 'Email copied' : 'Copy my email'}
+                                    icon={<IoCafeOutline />}
+                                    position="center"
+                                    otherClasses="!bg-[#161a31] relative justify-center top-5 flex "
+                                    handleClick={handleCopy}
+                                />
                             </div>
-                            <MagicButton
-                                title={copied ? 'Email copied' : 'Copy my Email'}
-                                icon={<IoCafeOutline />}
-                                otherClasses="!bg-[#161a31]"
-                                handleClick={handleCopy}
-                            />
+
+
                         </div>
+
                     )}
                 </div>
             </div>
