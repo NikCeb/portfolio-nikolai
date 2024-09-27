@@ -37,17 +37,6 @@ export const gridItems = [
         spareImg: "",
     },
 
-    // {
-    //     id: 5,
-    //     title: "Currently building a JS Animation library",
-    //     description: "",
-    //     className: "col-span-2 row-span-1 ",
-    //     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    //     titleClassName: "justify-center md:justify-start lg:justify-center",
-    //     img: "/b5.svg",
-    //     spareImg: "/grid.svg",
-    // },
-
 ];
 
 export const projects = [
