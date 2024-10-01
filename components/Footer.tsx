@@ -18,9 +18,11 @@ const Footer = () => {
                 </h1>
                 <p className='text-white-200 md:mt-10 my-5 text-center'>I got to make this with the help of a youtube video</p>
                 <a href='mailto:contact@me@tedst'>
-                    <MagicButton title='Get in Touch'
+                    <MagicButton
+                        title='Get in Touch'
                         icon={<FaLocationArrow />}
-                        position='center' />
+                        position='right'
+                    />
                 </a>
             </div>
             <div className='flex m-16 md:flex-row flex-col justify-between'>

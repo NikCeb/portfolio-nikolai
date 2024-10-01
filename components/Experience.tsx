@@ -6,13 +6,13 @@ const Experience = () => {
     return (
         <div className='py-20' id='experience'>
             <h1 className='heading'>
-                My
+                My {''}
                 <span className='text-purple'>
                     Work Experience
                 </span>
             </h1>
 
-            <div className='w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10'>
+            <div className='w-full mt-12 grid lg:grid-cols-4 grid-cols-2 gap-10'>
                 {workExperience.map((card) => (
                     <Button key={card.id} borderRadius='1.65rem'
                         className='flex-1 text-white border-neutral-200 dark:border-slate-200'

@@ -33,10 +33,10 @@ const Hero = () => {
                     text-center text-white-100 max-w-80'></h2>
                     <TextGenerateEffect
                         className=''
-                        words="Nikolai's Portfolio" />
+                        words="NIKOLAI'S  PORTFOLIO" />
 
                     <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
-                        Hallo si Nikolai ni
+                        Hello there stranger, welcome to my porfolio please feel free to contact me.
                     </p>
 
                     <a href='#about'>
