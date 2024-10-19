@@ -185,7 +185,6 @@ const ShaderMaterial = ({
     maxFps = 60,
 }: {
     source: string;
-    hovered?: boolean;
     maxFps?: number;
     uniforms: Uniforms;
 }) => {
@@ -201,9 +200,14 @@ const ShaderMaterial = ({
         }
         lastFrameTime = timestamp;
 
-        const material: any = ref.current.material;
-        const timeLocation = material.uniforms.u_time;
-        timeLocation.value = timestamp;
+        const material = (ref.current).material as THREE.ShaderMaterial;
+
+        if (material.uniforms) {
+            const timeLocation = material.uniforms.u_time;
+            if (timeLocation) {
+                timeLocation.value = timestamp;
+            }
+        }
     });
 
     const getUniforms = () => {
@@ -283,7 +287,7 @@ const ShaderMaterial = ({
         <mesh ref={ref as any}>
             <planeGeometry args={[2, 2]} />
             <primitive object={material} attach="material" />
-        </mesh>
+        </mesh >
     );
 };
 

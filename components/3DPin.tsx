@@ -34,7 +34,7 @@ export const PinContainer = ({
                 "relative group/pin z-50  cursor-pointer",
                 containerClassName
             )}
-            href={href ?? "/"}
+            href={"/"}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
 

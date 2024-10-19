@@ -5,7 +5,6 @@ import { BackgroundGradientAnimation } from "./GradientBackGround";
 import { techStackRow1, techStackRow2 } from "@/app/data";
 import Lottie from "react-lottie";
 import { useState } from "react";
-import { animate } from "framer-motion";
 import animationData from "@/app/data/confetti.json"
 import MagicButton from "./MagicButton";
 import { IoCafeOutline } from "react-icons/io5";
@@ -35,23 +34,13 @@ export const BentoGridItem = ({
     title,
     description,
     id,
-    img,
-    imgClassName,
     titleClassName,
-    spareImg,
-    link,
 }: {
     className?: string;
     title?: string | React.ReactNode;
     description?: string | React.ReactNode;
-    header?: React.ReactNode;
-    icon?: React.ReactNode;
     id?: number;
-    img?: string;
-    imgClassName?: string;
     titleClassName?: string;
-    spareImg?: string;
-    link?: string;
 }) => {
     const [copied, setCopied] = useState(false);
     const handleCopy = () => {
@@ -103,7 +92,7 @@ export const BentoGridItem = ({
 
                                 <span className="py-5 px-3 rounded-lg text-center bg-[#101321]" />
                                 {techStackRow1.map((items, index) => (
-                                    <span key={index} className="py-3 md:py-3 lg:py5 lg:px-3 px-3 lg:px-3 text-xs lg:text-base opacity-50 
+                                    <span key={index} className="py-3 md:py-3 lg:py5 px-3 lg:px-3 text-xs lg:text-base opacity-50 
                                                     lg:opacity-100 rounded-lg text-center bg-[#10132E] ">
                                         {items.item}
                                     </span>
@@ -115,7 +104,7 @@ export const BentoGridItem = ({
                             <div className="flex flex-col gap-3 lg:gap-5 ">
 
                                 {techStackRow2.map((items, index) => (
-                                    <span key={index} className="py-3 md:py-3 lg:py5 lg:px-3 px-3 lg:px-3 text-xs lg:text-base opacity-50
+                                    <span key={index} className="py-3 md:py-3 lg:py5  px-3 lg:px-3 text-xs lg:text-base opacity-50
                                                     lg:opacity-100 rounded-lg text-center bg-[#10132E] ">
                                         {items.item}
                                     </span>
