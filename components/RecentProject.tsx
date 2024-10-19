@@ -14,7 +14,7 @@ const RecentProject = () => {
             </h1>
             <div className='flex flex-wrap item-center justify-center p-4 gap-x-24 gap-y-8'>
                 {projects.map(({ id, title, des, img, iconLists, link }) => (
-                    <div key={id} className='sm:h-[41rem] h-[32rem] lg:min-h=[32.5rem] h-[25rem] flex items-center justify-center sm:w-[570px] w-[80vw] lg:mt-10 md:mt-10 sm:mt-10'>
+                    <div key={id} className='sm:h-[41rem] h-[32rem] lg:min-h=[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw] lg:mt-10 md:mt-10 sm:mt-10'>
                         <PinContainer title={link}
                             href={'#projects'}
                         >
@@ -41,10 +41,10 @@ const RecentProject = () => {
                                 </div>
 
                             </div>
-                            {/* <div className='flex justify-center items-center'>
+                            <div className='flex justify-center items-center'>
                                 <p className='flex lg:text-xl md:text-xs text-sm text-purple'>Check Site</p>
                                 <FaLocationArrow className='ms-3' color='#CBACF9' />
-                            </div> */}
+                            </div>
                         </PinContainer>
                     </div>
                 ))}
